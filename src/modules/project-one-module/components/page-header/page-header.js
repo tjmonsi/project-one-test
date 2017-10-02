@@ -1,6 +1,7 @@
 import 'polymer/polymer.html'
 import 'app-layout/app-header/app-header.html'
 import 'app-layout/app-toolbar/app-toolbar.html'
+import 'paper-button/paper-button.html'
 import './page-header.html'
 
 class PageHeader extends Polymer.Element {

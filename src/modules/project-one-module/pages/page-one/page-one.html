@@ -10,56 +10,145 @@
     </style>
 
     <section class="row wrap">
-      <section class="card flex-2">
-        <h1>Information</h1>
+      <div class="flex-2">
+        <section class="card">
+          <h1>Information</h1>
 
-        <section class="row">
-          <paper-input class="flex" label="Property Index Number" value="[[params.id]]"></paper-input>
-          <paper-input class="flex" label="TD No." value="888-888888"></paper-input>
-          <paper-input class="flex" label="Class" value="Residential"></paper-input>
+          <section class="row">
+            <paper-input class="flex" label="Property Index Number" value="[[params.id]]"></paper-input>
+            <paper-input class="flex" label="TD No." value="888-888888"></paper-input>
+            <paper-input class="flex" label="Class" value="Residential"></paper-input>
+          </section>
+
+          <h4>Owner</h4>
+          <section class="row">
+            <paper-input class="flex" always-float-label label="Last Name" value="Cruz"></paper-input>
+            <paper-input class="flex" always-float-label label="First Name" value="Celene"></paper-input>
+            <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+          </section>
+
+          <h4>Co-owner</h4>
+          <section class="row">
+            <paper-input class="flex" always-float-label label="Last Name" value="Carlos"></paper-input>
+            <paper-input class="flex" always-float-label label="First Name" value="Ben"></paper-input>
+            <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+          </section>
+
+          <h4>Address</h4>
+          <section class="row">
+            <paper-input class="flex" always-float-label label="Lot No." value="10"></paper-input>
+            <paper-input class="flex" always-float-label label="Block No." value="4"></paper-input>
+            <paper-input class="flex-3" always-float-label label="Street Name" value="3rd Street"></paper-input>
+            <paper-input class="flex-3" always-float-label label="Subdivision/Village/Compound" value="Belvedere Subdivision"></paper-input>
+            <paper-input class="flex" always-float-label label="Phase No." value="1"></paper-input>
+            <paper-input class="flex" always-float-label label="Purok" value=""></paper-input>
+            <paper-input class="flex" always-float-label label="Sitio" value=""></paper-input>
+            <paper-input class="flex-3" always-float-label label="Barangay" value="Paradahan"></paper-input>
+          </section>
+
+          <section class="row">
+            <paper-input class="flex-2" always-float-label label="District" value="Tanza"></paper-input>
+            <paper-input class="flex-2" always-float-label label="City/Municipality" value="Tanza"></paper-input>
+            <paper-input class="flex" always-float-label label="Region" value="IV"></paper-input>
+            <paper-input class="flex-2" always-float-label label="Province" value="Cavite"></paper-input>
+            <paper-input class="flex" always-float-label label="Zip Code" value="4108"></paper-input>
+
+            <paper-input class="flex-2" always-float-label label="Latitude" value="{{lat}}"></paper-input>
+            <paper-input class="flex-2" always-float-label label="Longitude" value="{{lng}}"></paper-input>
+          </section>
+
+          <paper-input always-float-label label="Assessed Value" value="Php 300,000.00"></paper-input>
+        </section>
+        <section class="card">
+          <h1>Current Year</h1>
+
+          <section class="row">
+            <paper-input class="flex" always-float-label label="Start" value="1st"><span slot="suffix">Qtr</span></paper-input>
+            <paper-input class="flex" always-float-label label="End" value="3rd"><span slot="suffix">Qtr</span></paper-input>
+            <div class="flex-11"></div>
+          </section>
+
+          <marked-element>
+            <div slot="markdown-html"></div>
+            <script type="text/markdown">
+              | Start     | End       | Base Amount Due | Discount | Penalty | Basic Total | SEF Total | Current Due (Basic + SEF) |
+              |:---------:|:---------:|----------------:|:--------:|:-------:|------------:|----------:|--------------------------:|
+              | 1/1/2017  | 6/30/2017 | 1,500.00        | ---      | 18%     | 1,770.00    | 1,770.00  | 3,540.00                  |
+              | 7/1/2017  | 9/30/2017 | 750.00          | 10%      | ---     | 675.00      | 675.00    | 1,350.00                  |
+              | **Total** |           |                 |          |         |             |           | 4,890.00                  |
+
+            </script>
+          </marked-element>
         </section>
 
-        <h4>Owner</h4>
-        <section class="row">
-          <paper-input class="flex" always-float-label label="Last Name" value="Cruz"></paper-input>
-          <paper-input class="flex" always-float-label label="First Name" value="Celene"></paper-input>
-          <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+        <section class="card">
+          <h1>Delinquency</h1>
+
+          <section class="row">
+            <paper-input class="flex" always-float-label label="Start" value="01/01/2016" type="date"></paper-input>
+            <paper-input class="flex" always-float-label label="End" value="12/31/2016" type="date"></paper-input>
+            <div class="flex-11"></div>
+          </section>
+
+          <marked-element>
+            <div slot="markdown-html"></div>
+            <script type="text/markdown">
+              | Start     | End        | Assessed Value | Base Tax | + % | Fine     | Basic Total | SEF Total | Current Due (Basic + SEF) |
+              |:---------:|:----------:|---------------:|---------:|----:|---------:|------------:|----------:|--------------------------:|
+              | 1/1/2016  | 12/31/2016 | 300,000.00     | 3,000.00 | 48% | 1,440.00 | 4,440.00    | 4,440.00  | 8,880.00                  |
+              | **Total** |            |                |          |     |          |             |           | 8,880.00                  |
+
+            </script>
+          </marked-element>
         </section>
+      </div>
 
-        <h4>Co-owner</h4>
-        <section class="row">
-          <paper-input class="flex" always-float-label label="Last Name" value="Carlos"></paper-input>
-          <paper-input class="flex" always-float-label label="First Name" value="Ben"></paper-input>
-          <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+
+
+      <div class="flex">
+        <google-map latitude="{{lat}}" longitude="{{lng}}" zoom="16" api-key="AIzaSyDdpZgjWiBnIo4B8lPYwUygukV2YfAuiLk">
+          <google-map-marker latitude="{{lat}}" longitude="{{lng}}"></google-map-marker>
+        </google-map>
+        <section class="card flex">
+          <h1 style="margin-bottom: 10px">
+            Create Official Receipt
+          </h1>
+
+          <paper-input always-float-label label="Official Receipt No." value="6065073" type="number"></paper-input>
+          <paper-input always-float-label label="Official Receipt Date" value="09-25-2017" type="date"></paper-input>
+          <paper-button raised>View Official Receipt</paper-button>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <h3>Previous Record of Payment</h3>
+          <marked-element>
+            <div slot="markdown-html"></div>
+            <script type="text/markdown">
+              | Start     | End        | Date Payment | Amount   |
+              |:---------:|:----------:|:------------:|---------:|
+              | 1/1/2015  | 12/31/2015 | 12/27/2014   | 1,022.60 |
+              | 1/1/2014  | 12/31/2014 | 12/27/2013   | 1,022.60 |
+              | 1/1/2013  | 12/31/2013 | 12/27/2012   | 1,022.60 |
+
+            </script>
+          </marked-element>
         </section>
+      </div>
 
-        <h4>Address</h4>
-        <section class="row">
-          <paper-input class="flex" always-float-label label="Lot No." value="10"></paper-input>
-          <paper-input class="flex" always-float-label label="Block No." value="4"></paper-input>
-          <paper-input class="flex-3" always-float-label label="Street Name" value="3rd Street"></paper-input>
-          <paper-input class="flex-3" always-float-label label="Subdivision/Village/Compound" value="Belvedere Subdivision"></paper-input>
-          <paper-input class="flex" always-float-label label="Phase No." value="1"></paper-input>
-          <paper-input class="flex" always-float-label label="Purok" value=""></paper-input>
-          <paper-input class="flex" always-float-label label="Sitio" value=""></paper-input>
-          <paper-input class="flex-3" always-float-label label="Barangay" value="Paradahan"></paper-input>
-        </section>
-
-        <section class="row">
-          <paper-input class="flex" always-float-label label="District" value="Tanza"></paper-input>
-          <paper-input class="flex" always-float-label label="City/Municipality" value="Tanza"></paper-input>
-          <paper-input class="flex-3" always-float-label label="Region" value="IV"></paper-input>
-          <paper-input class="flex-3" always-float-label label="Province" value="Cavite"></paper-input>
-          <paper-input class="flex" always-float-label label="Zip Code" value="4108"></paper-input>
-        </section>
-
-        <paper-input always-float-label label="Assessed Value" value="Php 300,000.00"></paper-input>
-      </section>
-
-      <google-map latitude="14.3179469" longitude="120.8638548" class="flex" zoom="16" api-key="AIzaSyDdpZgjWiBnIo4B8lPYwUygukV2YfAuiLk">
-        <google-map-marker latitude="14.3179469" longitude="120.8638548"></google-map-marker>
-      </google-map>
     </section>
+
+    <div class="row wrap">
+      <div class="flex-2">
+
+      </div>
+
+
+
+    </div>
+
 
     <!-- <section>
       <h1>Property Location</h1>

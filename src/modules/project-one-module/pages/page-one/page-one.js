@@ -12,7 +12,18 @@ window.marked = window.marked || marked
 class PageOne extends Polymer.Element {
   static get is () { return 'page-one' }
 
-
+  static get properties () {
+    return {
+      lat: {
+        type: Number,
+        value: 14.3179469
+      },
+      lng: {
+        type: Number,
+        value: 120.8638548
+      }
+    }
+  }
 }
 
 customElements.define(PageOne.is, PageOne)
