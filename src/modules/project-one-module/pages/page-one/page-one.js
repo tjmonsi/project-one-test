@@ -16,11 +16,11 @@ class PageOne extends Polymer.Element {
     return {
       lat: {
         type: Number,
-        value: 14.3179469
+        value: 14.3175732
       },
       lng: {
         type: Number,
-        value: 120.8638548
+        value: 120.8635632
       }
     }
   }
