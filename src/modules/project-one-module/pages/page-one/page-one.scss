@@ -27,3 +27,17 @@ section {
   margin: 5px;
   @include layout-flex-3;
 }
+
+table {
+  width: 100%;
+  td {
+    border: 1px solid grey;
+    padding: 2px 5px;
+    margin: 0px;
+    border-spacing: 0px;
+  }
+  th {
+    border: 1px solid grey;
+    padding: 2px 5px;
+  }
+}
