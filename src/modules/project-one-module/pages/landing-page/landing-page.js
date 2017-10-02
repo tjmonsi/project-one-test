@@ -1,6 +1,7 @@
 import 'polymer/polymer.html'
 import 'paper-input/paper-input.html'
 import 'paper-button/paper-button.html'
+import '../../fonts/page-font.html'
 import './landing-page.html'
 
 class LandingPage extends Polymer.Element {
