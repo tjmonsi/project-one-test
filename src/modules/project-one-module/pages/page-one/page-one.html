@@ -1,0 +1,107 @@
+<dom-module id="page-one">
+  <template>
+    <link rel="stylesheet" href="./page-one.scss">
+
+    <section class="section-one">
+      <h1>Information</h1>
+
+      <section class="row">
+        <paper-input class="flex" label="PIN" value="[[params.id]]"></paper-input>
+        <paper-input class="flex" label="Revenue Year" value="2017"></paper-input>
+        <paper-input class="flex" label="Status" value="Active"></paper-input>
+      </section>
+
+
+      <!-- Status: Active<br>
+      <br>
+
+      <h2>Property Location</h2>
+      Lot 10, Block 4, Bigay Daan Street, Purok 3, Brgy. Poblacion, Toledo District, Toledo, Cebu, Reg. VII
+
+      <h2>Owner Information</h2>
+      CRUZ, CELINE TAGARDA -->
+    </section>
+
+    <section>
+      <h1>Property Location</h1>
+
+      <section class="row">
+        <paper-input class="flex" always-float-label label="Lot No." value="10"></paper-input>
+        <paper-input class="flex" always-float-label label="Block No." value="4"></paper-input>
+        <paper-input class="flex-3" always-float-label label="Street Name" value="Bigay Daan"></paper-input>
+        <paper-input class="flex-3" always-float-label label="Subdivision/Village/Compound" value=""></paper-input>
+        <paper-input class="flex" always-float-label label="Phase No." value=""></paper-input>
+        <paper-input class="flex" always-float-label label="Purok" value="5"></paper-input>
+        <paper-input class="flex" always-float-label label="Sitio" value=""></paper-input>
+        <paper-input class="flex-3" always-float-label label="Barangay" value="Poblacion"></paper-input>
+      </section>
+
+      <section class="row">
+        <paper-input class="flex" always-float-label label="District" value="Toledo"></paper-input>
+        <paper-input class="flex" always-float-label label="City/Municipality" value="Toledo"></paper-input>
+        <paper-input class="flex-3" always-float-label label="Region" value="VII"></paper-input>
+        <paper-input class="flex-3" always-float-label label="Province" value="Cebu"></paper-input>
+        <paper-input class="flex" always-float-label label="Zip Code" value="6038"></paper-input>
+      </section>
+    </section>
+
+    <section>
+
+
+      <section class="row">
+
+        <div class="flex ">
+          <h1>Owner Information</h1>
+
+          <div class="row">
+            <paper-input class="flex" always-float-label label="Last Name" value="Cruz"></paper-input>
+            <paper-input class="flex" always-float-label label="First Name" value="Celene"></paper-input>
+            <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+          </div>
+
+        </div>
+
+        <div class="flex ">
+          <h1>Owner Declaration</h1>
+
+          <h3>Declared Name</h3>
+          <div class="row">
+
+            <paper-input class="flex" always-float-label label="Last Name" value="Cruz"></paper-input>
+            <paper-input class="flex" always-float-label label="First Name" value="Celene"></paper-input>
+            <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+          </div>
+
+          <h3>Beneficial User</h3>
+          <div class="row">
+
+            <paper-input class="flex" always-float-label label="Last Name" value="Carlos"></paper-input>
+            <paper-input class="flex" always-float-label label="First Name" value="Ben"></paper-input>
+            <paper-input class="flex" always-float-label label="Middle Name" value="Tagarda"></paper-input>
+          </div>
+
+        </div>
+      </section>
+
+
+    </section>
+
+    <section>
+      <h1>Assessed Value</h1>
+
+      <paper-input always-float-label label="Assessed Value" value="Php 500,000.00"></paper-input>
+    </section>
+
+    <section>
+      <h1>Current Payment</h1>
+    </section>
+
+    <section>
+      <h1>Pending Deficiencies</h1>
+    </section>
+
+    <section>
+      <h1>Payment History</h1>
+    </section>
+  </template>
+</dom-module>
